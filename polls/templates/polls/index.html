@@ -1,7 +1,16 @@
+{% load static %}
+
 <!doctype html>
 <html>
+    <head>
+    <link rel="stylesheet" href="{% static 'polls/style.css' %}">
+    <title>Polls</title>
+  </head>
   <body>
     <h1>Latest questions</h1>
+
+    <img src="{% static 'polls/images/background.png' %}" alt="Background">
+
     {% if latest_question_list %}
       <ul>
         {% for q in latest_question_list %}

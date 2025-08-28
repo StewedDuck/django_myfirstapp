@@ -1,0 +1,26 @@
+/* polls/static/polls/style.css */
+body { 
+  font-family: system-ui, Arial, sans-serif; 
+  background: #f6f8fa;
+}
+
+h1 { 
+  margin-bottom: 0.4rem; 
+}
+
+ul { 
+  padding-left: 1.2rem; 
+}
+
+li { 
+  margin: 0.25rem 0; 
+}
+
+li a {
+  text-decoration: none;
+  color: #0a7;                 
+}
+
+li a:hover {
+  text-decoration: underline;
+}
