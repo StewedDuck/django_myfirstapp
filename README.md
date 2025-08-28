@@ -1,1 +1,1 @@
-# myfirstapp
+# django_myfirstapp
