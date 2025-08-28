@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+  <body>
+    <h1>{{ question.question_text }}</h1>
+
+    {% if error_message %}<p style="color:red;"><strong>{{ error_message }}</strong></p>{% endif %}
+
+    <form action="{% url 'polls:vote' question.id %}" method="post">
+      {% csrf_token %}
+      {% for choice in question.choice_set.all %}
+        <label>
+          <input type="radio" name="choice" value="{{ choice.id }}">
+          {{ choice.choice_text }}
+        </label><br>
+      {% endfor %}
+      <button type="submit">Vote</button>
+    </form>
+
+    <p><a href="{% url 'polls:index' %}">Back to list</a></p>
+  </body>
+</html>
